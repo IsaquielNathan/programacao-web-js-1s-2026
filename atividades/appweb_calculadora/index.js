@@ -21,25 +21,29 @@ app.listen(PORT, ()=>{
 app.get('/',  (req, res)=>{
     res.send("Ola, mundo! Estou na web...");
 });
+// Exemplo : http://localhost:8080/
 
 // URL fixa
 app.get('/ola/joao', (req, res)=>{
     res.send('Ola, João');
 });
+// Exemplo: http://localhost:8080/ola/joao
 
 // URL com parâmetro
-// app.get('/ola/:nome', (req, res)=>{
-//     res.send('Ola, ${req,nome}!');
-// });
+ app.get('/ola/:nome', (req, res)=>{
+    res.send(`Ola, ${req.params.nome}!`);
+});
+// Exemplo: http://localhost:8080/ola/Isaquiel 
 
 // URL com múltiplos parâmetros
-app.get ('./calculadora/somar/:a/:b',(req, res)=>{
+app.get ('/calculadora/somar/:a/:b',(req, res)=>{
     let a = Number (req.params.a);
     let b = Number (req.params.b);
     let resultado = calculadora.somar(a, b);
-    let string_resultado =  `<h1>${a} + ${b} = ${resultado}<\h1>`;
+    let string_resultado =  `<h1>${a} + ${b} = ${resultado}</h1>`;
     res.send(string_resultado)
     LOG.push(string_resultado);
 });
+//Exemplo : http://localhost:8080/calculadora/somar/10/8
 
 // Inicializar a aplicação na porta definida
