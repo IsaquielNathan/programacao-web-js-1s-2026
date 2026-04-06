@@ -1,3 +1,4 @@
+// Entrar na pasta desejada
 // npm init e npm install na criação de pacotes json
 // npm install express@4.21.2
 
@@ -21,7 +22,7 @@ app.listen(PORT, ()=>{
 app.get('/',  (req, res)=>{
     res.send("Ola, mundo! Estou na web...");
 });
-// Exemplo : http://localhost:8080/
+// Exemplo : http://localhost:8080
 
 // URL fixa
 app.get('/ola/joao', (req, res)=>{
