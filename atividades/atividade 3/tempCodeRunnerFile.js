@@ -1,6 +1,3 @@
-// Mantém a lista de produtos em memória
-let produtos = [];
-
 function cadastrar_produto(id, nome, qtd){
         let produto = {
             id: id,
@@ -23,10 +20,3 @@ function editar_produto(id, qtd) {
         produto.qtd = qtd;
     }
 }
-
-module.exports = {
-    cadastrar_produto,
-    listar_produtos,
-    remover_produtos,
-    editar_produto
-};
