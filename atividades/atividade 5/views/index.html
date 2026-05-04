@@ -24,23 +24,26 @@
                 </div>
                 <div class="col-6 mt-1">
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control">
+                    <input type="text" name="nome" id="nome" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Este campo não pode ser vazio.
+                    </div>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="sobrenome" class="form-label">Sobrenome:</label>
-                    <input type="text" name="sobrenome" id="sobrenome" class="form-control">
+                    <input type="text" name="sobrenome" id="sobrenome" class="form-control" required>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="cpf" class="form-label">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" class="form-control">
+                    <input type="number" name="cpf" id="cpf" class="form-control" required>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="data_nascimento" class="form-label">Data de nascimento:</label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control">
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control" required>
                 </div>
                 <div class="col-12 mt-1">
                     <label for="endereco" class="form-label">Endereço:</label>
-                    <input type="text" name="endereco" id="endereco" class="form-control">
+                    <input type="text" name="endereco" id="endereco" class="form-control" required>
                 </div>
             </div>
             <form action="">
@@ -49,37 +52,24 @@
                         <h3>Dados da consulta</h3>
                     </div>
                     <div class="col-6 mt-1">
-                        <label for="clinica">Clínica</label>
-                        <select class="form-control" id="clinica">
-                            <option>Escolha a clínica</option>
-                            <option>Taguatinga</option>
-                            <option>Recanto das Emas</option>
-                            <option>Samambaia</option>
-                            <option>Gama</option>
-                            <option>Ceilândia</option>
-                        </select>
+                        <label for="clinica" class="form-label">Clínica:</label>
+                        <input type="text" name="clinica" id="clinica" class="form-control" required>
                     </div>
                     <div class="col-6 mt-1">
-                        <label for="especialidade"> Especialidade</label>
-                        <select class="form-control" id="especialidade">
-                            <option>Escolha a especialidade</option>
-                            <option>Gastroenterologia</option>
-                            <option>Dentista</option>
-                            <option>Neurologia</option>
-                            <option>Fisioterapia</option>
-                        </select>
+                        <label for="especialidade" class="form-label">Especialidade:</label>
+                        <input type="text" name="especialidade" id="especialidade" class="form-control" required>
                     </div>
                     <div class="col-6 mt-1">
                         <label for="data" class="form-label">Data</label>
-                        <input type="date" name="data" id="data" class="form-control">
+                        <input type="date" name="data" id="data" class="form-control" required>
                     </div>
                     <div class="col-6 mt-1">
                         <label for="hora" class="form-label">Hora</label>
-                        <input type="time" class="form-control" id="hora" name="hora">
+                        <input type="time" class="form-control" id="hora" name="hora" required>
                     </div>
-                    <div class="col-12 mt-4">
-                        <label for="observacao">Observação</label>
-                        <textarea class="form-control" id="observacao" rows="3"></textarea>
+                    <div class="col-12 mt-1">
+                        <label for="observacao" class="form-label">Observação</label>
+                        <input type="text" class="form-control" id="observacao" name="observacao">
                     </div>
 
                 </div>
