@@ -65,55 +65,53 @@
                 </div>
                 <div class="col-6 mt-1">
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" value="{{dados_form.nome}}">
+                    <input type="text" name="nome" id="nome" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Este campo não pode ser vazio.
+                    </div>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="sobrenome" class="form-label">Sobrenome:</label>
-                    <input type="text" name="sobrenome" id="sobrenome" class="form-control"
-                        value="{{dados_form.sobrenome}}">
+                    <input type="text" name="sobrenome" id="sobrenome" class="form-control" required>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="cpf" class="form-label">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" class="form-control" value="{{dados_form.cpf}}">
+                    <input type="number" name="cpf" id="cpf" class="form-control" required>
                 </div>
                 <div class="col-6 mt-1">
                     <label for="data_nascimento" class="form-label">Data de nascimento:</label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control"
-                        value="{{dados_form.data_nascimento}}">
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control" required>
                 </div>
                 <div class="col-12 mt-1">
                     <label for="endereco" class="form-label">Endereço:</label>
-                    <input type="text" name="endereco" id="endereco" class="form-control"
-                        value="{{dados_form.endereco}}">
+                    <input type="text" name="endereco" id="endereco" class="form-control" required>
                 </div>
             </div>
-
-            <div class="row mt-3">
-                <div class="col-12">
-                    <h3>Dados da consulta</h3>
-                </div>
-                <div class="col-6 mt-1">
-                    <label for="clinica" class="form-label">Clínica:</label>
-                    <input type="text" name="clinica" id="clinica" class="form-control" value="{{dados_form.clinica}}">
-                </div>
-                <div class="col-6 mt-1">
-                    <label for="especialidade" class="form-label">Especialidade:</label>
-                    <input type="text" name="especialidade" id="especialidade" class="form-control"
-                        value="{{dados_form.especialidade}}">
-                </div>
-                <div class="col-6 mt-1">
-                    <label for="data" class="form-label">Data</label>
-                    <input type="date" name="data" id="data" class="form-control" value="{{dados_form.data}}">
-                </div>
-                <div class="col-6 mt-1">
-                    <label for="hora" class="form-label">Hora</label>
-                    <input type="time" class="form-control" id="hora" name="hora" value="{{dados_form.hora}}">
-                </div>
-                <div class="col-12 mt-1">
-                    <label for="observacao" class="form-label">Observação</label>
-                    <input type="text" class="form-control" id="observacao" name="observacao"
-                        value="{{dados_form.observacao}}">
-                </div>
+            <form action="">
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h3>Dados da consulta</h3>
+                    </div>
+                    <div class="col-6 mt-1">
+                        <label for="clinica" class="form-label">Clínica:</label>
+                        <input type="text" name="clinica" id="clinica" class="form-control" required>
+                    </div>
+                    <div class="col-6 mt-1">
+                        <label for="especialidade" class="form-label">Especialidade:</label>
+                        <input type="text" name="especialidade" id="especialidade" class="form-control" required>
+                    </div>
+                    <div class="col-6 mt-1">
+                        <label for="data" class="form-label">Data</label>
+                        <input type="date" name="data" id="data" class="form-control" required>
+                    </div>
+                    <div class="col-6 mt-1">
+                        <label for="hora" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="hora" name="hora" required>
+                    </div>
+                    <div class="col-12 mt-1">
+                        <label for="observacao" class="form-label">Observação</label>
+                        <input type="text" class="form-control" id="observacao" name="observacao">
+                    </div>
 
             </div>
             <div class="row mt-3">
