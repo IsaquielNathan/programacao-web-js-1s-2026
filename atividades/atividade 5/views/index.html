@@ -16,7 +16,48 @@
             <div class="col-12 text-center mt-3">
                 <h1>Agendamento</h1>
             </div>
+
+            <div class="col-12">
+                {{#dados_erros.erro_nome}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>NOME</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_nome}}
+
+                {{#dados_erros.erro_sobrenome}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>SOBRENOME</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_sobrenome}}
+
+                {{#dados_erros.erro_cpf}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>CPF</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_cpf}}
+
+                {{#dados_erros.erro_data_nascimento}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>DATA DE NASCIMENTO</b> não pode ser vazio!
+                </div>
+                {{/dados_erros.erro_data_nascimento}}
+
+                {{#dados_erros.erro_endereco}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>ENDEREÇO</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_endereco}}
+
+                {{#dados_erros.erro_clinica}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>CLÍNICA</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_clinica}}
+
+                {{#dados_erros.erro_especialidade}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>ESPECIALIDADE</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_especialidade}}
+
+                {{#dados_erros.erro_data}}
+                <div class="alert alert-danger mt-3" role="alert">A <b>DATA DA CONSULTA</b> não pode ser vazia ou no
+                    passado!</div>
+                {{/dados_erros.erro_data}}
+
+                {{#dados_erros.erro_hora}}
+                <div class="alert alert-danger mt-3" role="alert">O campo <b>HORA</b> não pode ser vazio!</div>
+                {{/dados_erros.erro_hora}}
+            </div>
         </div>
+
         <form action="/agendamento" method="post">
             <div class="row mt-3">
                 <div class="col-12">
@@ -24,60 +65,62 @@
                 </div>
                 <div class="col-6 mt-1">
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" required>
-                    <div class="invalid-feedback">
-                        Este campo não pode ser vazio.
-                    </div>
+                    <input type="text" name="nome" id="nome" class="form-control" value="{{dados_form.nome}}">
                 </div>
                 <div class="col-6 mt-1">
                     <label for="sobrenome" class="form-label">Sobrenome:</label>
-                    <input type="text" name="sobrenome" id="sobrenome" class="form-control" required>
+                    <input type="text" name="sobrenome" id="sobrenome" class="form-control"
+                        value="{{dados_form.sobrenome}}">
                 </div>
                 <div class="col-6 mt-1">
                     <label for="cpf" class="form-label">CPF:</label>
-                    <input type="number" name="cpf" id="cpf" class="form-control" required>
+                    <input type="number" name="cpf" id="cpf" class="form-control" value="{{dados_form.cpf}}">
                 </div>
                 <div class="col-6 mt-1">
                     <label for="data_nascimento" class="form-label">Data de nascimento:</label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control" required>
+                    <input type="date" name="data_nascimento" id="data_nascimento" class="form-control"
+                        value="{{dados_form.data_nascimento}}">
                 </div>
                 <div class="col-12 mt-1">
                     <label for="endereco" class="form-label">Endereço:</label>
-                    <input type="text" name="endereco" id="endereco" class="form-control" required>
+                    <input type="text" name="endereco" id="endereco" class="form-control"
+                        value="{{dados_form.endereco}}">
                 </div>
             </div>
-            <form action="">
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <h3>Dados da consulta</h3>
-                    </div>
-                    <div class="col-6 mt-1">
-                        <label for="clinica" class="form-label">Clínica:</label>
-                        <input type="text" name="clinica" id="clinica" class="form-control" required>
-                    </div>
-                    <div class="col-6 mt-1">
-                        <label for="especialidade" class="form-label">Especialidade:</label>
-                        <input type="text" name="especialidade" id="especialidade" class="form-control" required>
-                    </div>
-                    <div class="col-6 mt-1">
-                        <label for="data" class="form-label">Data</label>
-                        <input type="date" name="data" id="data" class="form-control" required>
-                    </div>
-                    <div class="col-6 mt-1">
-                        <label for="hora" class="form-label">Hora</label>
-                        <input type="time" class="form-control" id="hora" name="hora" required>
-                    </div>
-                    <div class="col-12 mt-1">
-                        <label for="observacao" class="form-label">Observação</label>
-                        <input type="text" class="form-control" id="observacao" name="observacao">
-                    </div>
 
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h3>Dados da consulta</h3>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-12"></div>
-                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                <div class="col-6 mt-1">
+                    <label for="clinica" class="form-label">Clínica:</label>
+                    <input type="text" name="clinica" id="clinica" class="form-control" value="{{dados_form.clinica}}">
                 </div>
-            </form>
+                <div class="col-6 mt-1">
+                    <label for="especialidade" class="form-label">Especialidade:</label>
+                    <input type="text" name="especialidade" id="especialidade" class="form-control"
+                        value="{{dados_form.especialidade}}">
+                </div>
+                <div class="col-6 mt-1">
+                    <label for="data" class="form-label">Data</label>
+                    <input type="date" name="data" id="data" class="form-control" value="{{dados_form.data}}">
+                </div>
+                <div class="col-6 mt-1">
+                    <label for="hora" class="form-label">Hora</label>
+                    <input type="time" class="form-control" id="hora" name="hora" value="{{dados_form.hora}}">
+                </div>
+                <div class="col-12 mt-1">
+                    <label for="observacao" class="form-label">Observação</label>
+                    <input type="text" class="form-control" id="observacao" name="observacao"
+                        value="{{dados_form.observacao}}">
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-12"></div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </div>
+        </form>
 
     </div>
 
