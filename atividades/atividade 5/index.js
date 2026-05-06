@@ -11,7 +11,6 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.urlencoded({ extended: true }));
 
-<<<<<<< HEAD
 app.get("/", (req, res)=>{
 
     let dados_erros = {
@@ -176,7 +175,7 @@ app.post('/agendamento', (req, res)=>{
 app.listen(PORT, ()=>{
     console.log('app rodando na porta ' + PORT);
 });
-=======
+
 app.get("/", (req, res) => {
     let dados_agendamento
     res.render("index.html");
@@ -203,4 +202,3 @@ app.listen(PORT, () => {
     console.log('App rodando na porta ' + PORT);
 });
 
->>>>>>> e60471cf35debed7d1e09081927b215065453cf4
